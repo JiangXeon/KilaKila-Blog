@@ -1,5 +1,4 @@
-import request from "../utils/request"
-
+import request from "../utils/request";
 
 /**
  * 获取文章评论列表
@@ -8,12 +7,11 @@ import request from "../utils/request"
  * @param {number} pageSize 每页评论数
  */
 function getCommentList(articleId, pageNum, pageSize) {
-    return request({
-        url: "/comment/commentList",
-        params: { articleId, pageNum, pageSize }
-    })
+  return request({
+    url: "/comment/commentList",
+    params: { articleId, pageNum, pageSize },
+  });
 }
-
 
 /**
  * 添加评论
@@ -21,14 +19,13 @@ function getCommentList(articleId, pageNum, pageSize) {
  * @param {string} content 评论内容
  */
 function addComment(articleId, content) {
-    return request({
-        url: "/comment",
-        method: "post",
-        data: { articleId, content },
-        needAuthentication: true
-    })
+  return request({
+    url: "/comment",
+    method: "post",
+    data: { articleId, content },
+    needAuthentication: true,
+  });
 }
-
 
 /**
  * 更新评论
@@ -36,26 +33,24 @@ function addComment(articleId, content) {
  * @param {string} content 评论内容
  */
 function updateComment(id, content) {
-    return request({
-        url: "/comment",
-        method: "put",
-        data: {id, content},
-        needAuthentication: true
-    })
+  return request({
+    url: "/comment",
+    method: "put",
+    data: { id, content },
+    needAuthentication: true,
+  });
 }
-
 
 /**
  *
  * @param {number} id 删除评论
  */
 function deleteComment(id) {
-    return request({
-        url: `/comment/${id}`,
-        method: "delete",
-        needAuthentication: true
-    })
+  return request({
+    url: `/comment/${id}`,
+    method: "delete",
+    needAuthentication: true,
+  });
 }
 
-
-export { getCommentList, addComment, deleteComment, updateComment }
+export { getCommentList, addComment, deleteComment, updateComment };

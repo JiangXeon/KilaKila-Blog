@@ -1,12 +1,11 @@
-import axios from "axios"
-
+import axios from "axios";
 
 /**
  * 小歪二次元图像
  * @returns promise
  */
 function ixiaowai() {
-    return axios.get('/ixiaowai/api/api.php?return=json')
+  return axios.get("/ixiaowai/api/api.php?return=json");
 }
 
-export { ixiaowai }
+export { ixiaowai };

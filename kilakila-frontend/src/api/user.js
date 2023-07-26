@@ -1,5 +1,5 @@
-import request from '../utils/request'
-import { getRandomAvatar } from "../utils/avatar"
+import request from "../utils/request";
+import { getRandomAvatar } from "../utils/avatar";
 
 /**
  * 用户登录
@@ -8,11 +8,11 @@ import { getRandomAvatar } from "../utils/avatar"
  * @returns promise
  */
 function login(userName, password) {
-    return request({
-        url: "/login",
-        method: "post",
-        data: { userName, password },
-    })
+  return request({
+    url: "/login",
+    method: "post",
+    data: { userName, password },
+  });
 }
 
 /**
@@ -20,11 +20,11 @@ function login(userName, password) {
  * @returns promise
  */
 function logout() {
-    return request({
-        url: "/logout",
-        method: "post",
-        needAuthentication: true
-    })
+  return request({
+    url: "/logout",
+    method: "post",
+    needAuthentication: true,
+  });
 }
 
 /**
@@ -36,27 +36,25 @@ function logout() {
  * @returns promise
  */
 function register(userName, nickName, email, password) {
-    return request({
-        url: "/user/register",
-        method: "post",
-        data: { userName, nickName, email, password, avatar: getRandomAvatar() },
-    })
+  return request({
+    url: "/user/register",
+    method: "post",
+    data: { userName, nickName, email, password, avatar: getRandomAvatar() },
+  });
 }
-
 
 /**
  * 获取管理员信息
  */
 function getAdminInfo() {
-    return request.get("/user/adminInfo")
+  return request.get("/user/adminInfo");
 }
-
 
 /**
  * 获取用户信息
  */
 function getUserInfo() {
-    return request.get("/user/userInfo")
+  return request.get("/user/userInfo");
 }
 
 /**
@@ -65,13 +63,12 @@ function getUserInfo() {
  * @returns promise
  */
 function updateUserInfo(userInfo) {
-    return request({
-        url: "/user/userInfo",
-        method: "put",
-        data: userInfo,
-        needAuthentication: true
-    })
+  return request({
+    url: "/user/userInfo",
+    method: "put",
+    data: userInfo,
+    needAuthentication: true,
+  });
 }
 
-
-export { login, logout, register, getAdminInfo, getUserInfo, updateUserInfo }
+export { login, logout, register, getAdminInfo, getUserInfo, updateUserInfo };

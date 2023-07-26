@@ -1,5 +1,4 @@
-import request from '../utils/request'
-
+import request from "../utils/request";
 
 /**
  * 获取归档及其文章数量统计
@@ -8,12 +7,13 @@ import request from '../utils/request'
  * @returns promise
  */
 function getArchiveCountList(pageNum, pageSize) {
-    return request({
-        url: "/archive/archiveCountList",
-        params: {
-            pageNum, pageSize
-        }
-    })
+  return request({
+    url: "/archive/archiveCountList",
+    params: {
+      pageNum,
+      pageSize,
+    },
+  });
 }
 
 /**
@@ -23,12 +23,13 @@ function getArchiveCountList(pageNum, pageSize) {
  * @returns promise
  */
 function getArchiveList(pageNum, pageSize) {
-    return request({
-        url: "/archive/archiveList",
-        params: {
-            pageNum, pageSize
-        }
-    })
+  return request({
+    url: "/archive/archiveList",
+    params: {
+      pageNum,
+      pageSize,
+    },
+  });
 }
 
-export { getArchiveCountList, getArchiveList }
+export { getArchiveCountList, getArchiveList };

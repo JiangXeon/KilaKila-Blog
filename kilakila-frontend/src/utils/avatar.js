@@ -5,8 +5,8 @@ var fallbackAvatar = require("@/assets/image/fallback-avatar.jpg");
  * @returns 头像 url
  */
 function getRandomAvatar() {
-    let n = parseInt(Math.random() * 100)
-    return `https://avatars.githubusercontent.com/u/683682${n}?s=100&v=4`
+  let n = parseInt(Math.random() * 100);
+  return `https://avatars.githubusercontent.com/u/683682${n}?s=100&v=4`;
 }
 
-export { fallbackAvatar, getRandomAvatar }
+export { fallbackAvatar, getRandomAvatar };

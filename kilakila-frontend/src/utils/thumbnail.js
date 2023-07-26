@@ -5,7 +5,7 @@ var defaultThumbnail = require("@/assets/image/article-thumbnail.jpg");
  * @param {Event} event 错误事件
  */
 function useDefaultThumbnail(event) {
-    event.target.src = defaultThumbnail;
+  event.target.src = defaultThumbnail;
 }
 
-export { defaultThumbnail, useDefaultThumbnail }
+export { defaultThumbnail, useDefaultThumbnail };
